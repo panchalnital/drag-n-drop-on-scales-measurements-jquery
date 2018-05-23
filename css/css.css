@@ -1,0 +1,290 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 21, 2017, 3:58:11 AM
+    Author     : nital.panchal
+*/
+
+
+
+
+  #containment-wrapper .draggable { /* Custom style for dropped element */
+	position: fixed ;
+}
+  .draggable {
+   width: 135px;
+    height: 195px;
+      padding: 0.5em;
+      float: left;
+     // border: 1px solid #dddddd;
+      margin: 0 10px 10px 0;
+      z-index:2;
+  }
+  .paddingDragg{
+       margin-right: 10px;
+  }
+  
+  .overlapbox{
+      z-index:2;
+  }
+  
+  .col-4 i{
+      font-size: 4em;
+  }
+  /*#draggable, #draggable2 {
+      margin-bottom:20px;
+  }
+  #draggable {
+      cursor: n-resize;
+  }
+  #draggable3 {
+      cursor: move;
+  }*/
+  #containment-wrapper {
+      //width: 1000px;
+      width: 510px;
+      border-radius:250px;
+      position: absolute;
+     // margin-left: 718px;
+      height:500px;
+      margin-left: 0px;
+      border:0.0px solid #000;
+      padding: 5px;
+ 
+    
+   
+  }
+
+   #containment-wrapper2 {
+        width: 500px;
+        height: 600px;
+       
+	
+
+        margin-left: 35px;
+        border: 0.0px solid #000;
+        padding: 5px;
+  }
+  h3 {
+      clear: left;
+  }
+  
+  
+  
+  #line hr{
+    hight: 2px;
+    width: 786px;
+    margin-left: 230px;
+    margin-top: 100px;
+}
+ #leftside {
+         hight: 2px;
+    width: 786px;
+    margin-left: 230px;
+
+}
+  
+ #rightside {
+        width: 786px;
+margin-left: 908px;
+margin-right: 140px;
+margin-top: -52px;
+}
+  
+  
+.circle
+    {
+       
+    width:500px;
+    height:500px;
+        
+    border-radius:250px;
+
+    font-size:50px;
+    color:#a51010;
+    //a51010
+    //#b7440c
+    //#b78c0c
+    //#436714
+    //#253c08
+    //#fff
+    line-height:500px;
+    text-align:center;
+    background:#a51010;
+         position: relative;
+    }
+    
+   .circle1
+    {
+    border-radius:250px;
+    margin-top: 0px;
+    top: 47px;
+    color:#b7440c;
+    left: 46px;
+    width: 410px;
+    height: 410px;
+    text-align:center;
+    background:#b7440c;
+    position: relative;
+    } 
+    
+ .circle2
+    {
+    border-radius:250px;
+    margin-top: 0px;
+    top: 47px;
+    color:#b78c0c;
+    left: 47px;
+    width: 316px;
+    height: 316px;
+    text-align:center;
+    background:#b78c0c;
+    position: relative;
+    } 
+    
+ .circle3
+    {
+    border-radius:250px;
+    margin-top: 0px;
+    top: 47px;
+    color:#436714;
+    left: 43px;
+    width: 230px;
+    height: 230px;
+    text-align:center;
+    background:#436714;
+    position: relative;
+    }   
+   
+    .circle4
+    {
+    border-radius:250px;
+    margin-top: 0px;
+    top: 47px;
+    color:#253c08;
+    left: 43px;
+    width: 140px;
+    height: 140px;
+    text-align:center;
+    background:#253c08;
+    position: relative;
+    }
+    
+    .circle5
+    {
+    border-radius:250px;
+    margin-top: 0px;
+    top: 31px;
+    color:#000;
+    left: 31px;
+    width: 80px;
+    height: 80px;
+    text-align:center;
+    background:#000;
+    position: relative;
+    }
+    
+    .circleText
+    {
+    font-size: smaller;
+    border-radius:250px;
+    margin-top: 0px;
+    top: 35px;
+    color:#fff;
+    left: 9px;
+    width: 28px;
+    height: 80px;
+    text-align:center;
+    position: relative;
+    }
+    
+    
+ .arrow-down {
+  width: 0; 
+  height: 0; 
+  margin-top: -2px;
+  margin-left: 31px;
+  color:#fff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+ }
+  
+ .dashedline hr{
+    border: 1px dashed black;
+ }
+    
+ #circleleid {
+   // margin-left: 50px;
+           
+  }
+  .alignent
+  {
+     width: 122px;
+    margin-top: 555px;
+    margin-left: 950px;
+  }
+  
+  .alignent p
+   {
+         margin-top: 0px;
+   }
+  .spaceline hr{
+            width:1;
+            size:210;
+  }
+  
+ 
+  div.img1{
+    height: 100px; width: 100px;
+     background-image:url(http://localhost/360/dragdrop/imges/download.jpg);
+   
+}
+
+div.imagedisplay:before{
+    z-index: 2;
+}
+.verline hr{
+        display: block;
+}
+
+body:after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 25px;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px dotted #444;
+}
+
+.vaterxline :before   {
+    content:"";
+    position: absolute;
+   
+    height: 230px;
+    z-index: 2;
+    top: 15px;
+    bottom: 0;
+    left: 100%;
+    border-left: 2px dotted #fff;
+}
+.vaterxUper  {
+    content:"";
+    position: absolute;
+   
+    height: 245px;
+    z-index: 2;
+    top: -187px;
+    bottom: 0;
+    left: 49%;
+    border-left: 2px dotted #fff;
+}
+
+.removesbtn {
+    width: 20px;
+    height: 20px;
+}

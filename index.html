@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Drag & Drop</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+<!--  <link rel="stylesheet" href="/resources/demos/style.css">-->
+
+  <link href="css/demo.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+ 
+  
+  <!-- zoom use js and css -->
+   <link href='css/jquery.lighter.css' rel='stylesheet' type='text/css'>
+      
+      <script src='js/jquery.js' type='text/javascript'></script>
+      <script src='js/jquery.lighter.js' type='text/javascript'></script>
+  <!-- end js  for js and css -->
+  
+
+ <!--<script src="js/zoom.js" type="text/javascript"></script>-->
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/meter.js" type="text/javascript"></script>
+  <script>
+  
+var sPositions = localStorage.positions || "{}",
+positions = JSON.parse(sPositions);
+$.each(positions, function (id, pos) {
+    $("#" + id).css(pos)
+})
+$( function() {
+      $(".verline").hide();
+       $(".verline1").hide();
+        $(".verline2").hide();    
+         $(".verline3").hide();
+          $(".verline4").hide();
+           $(".verline5").hide();
+$("#draggable").draggable({
+    containment: "#containment-wrapper",
+    scroll: false,
+    stop: function (event, ui) {
+        positions[this.id] = ui.position
+        localStorage.positions = JSON.stringify(positions)
+       
+         var p = $( ".movexy" );
+        var position = p.position();
+       // $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+        var pleft=position.left;
+        var val1=xycoordinate(pleft);
+        $('input#drap').val(val1); 
+        
+        
+        if(position.top > 80){
+           //alert("show");
+           $(".verline").show();
+            // $("#draggable3").addclass('<hr width="1" size="500">');
+        }else{
+            //alert("hide");
+              $(".verline").hide();
+        }
+    }
+});
+
+$("#draggable1").draggable({
+    
+   
+    containment: "#containment-wrapper",
+    scroll: false,
+    stop: function (event, ui) {
+        positions[this.id] = ui.position
+        localStorage.positions = JSON.stringify(positions)
+        $("#draggable1").removeClass("ali2");
+        var p = $( ".movexy1" );
+        var position = p.position();
+       // $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+        var pleft=position.left;
+        var val1=xycoordinate(pleft);
+        $('input#drap1').val(val1); 
+       
+        if(position.top > 80){
+           //alert("show");
+           $(".verline1").show();
+            // $("#draggable3").addclass('<hr width="1" size="500">');
+        }else{
+            //alert("hide");
+              $(".verline1").hide();
+        }
+    }
+});
+
+$("#draggable2").draggable({
+    containment: "#containment-wrapper",
+    scroll: false,
+    stop: function (event, ui) {
+        positions[this.id] = ui.position
+        localStorage.positions = JSON.stringify(positions)
+        
+        var p = $( ".movexy2" );
+        var position = p.position();
+       // $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+       var pleft=position.left;
+        var val1=xycoordinate(pleft);
+        $('input#drap2').val(val1); 
+        
+        if(position.top > 80){
+           //alert("show");
+           $(".verline2").show();
+            // $("#draggable3").addclass('<hr width="1" size="500">');
+        }else{
+            //alert("hide");
+              $(".verline2").hide();
+        }
+    }
+    
+    
+    
+    
+});
+
+$("#draggable3").draggable({
+    containment: "#containment-wrapper",
+    scroll: false,
+    stop: function (event, ui) {
+        positions[this.id] = ui.position
+        localStorage.positions = JSON.stringify(positions)
+        
+        var p = $( ".movexy3" );
+        var position = p.position();
+        var pleft=position.left;
+        var val1=xycoordinate(pleft);
+        $('input#drap3').val(val1); 
+       // $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+        
+        if(position.top > 80){
+           //alert("show");
+           $(".verline3").show();
+            // $("#draggable3").addclass('<hr width="1" size="500">');
+        }else{
+            //alert("hide");
+              $(".verline3").hide();
+        }
+    }
+});
+
+$("#draggable4").draggable({
+    containment: "#containment-wrapper",
+    scroll: false,
+    stop: function (event, ui) {
+        positions[this.id] = ui.position
+        localStorage.positions = JSON.stringify(positions)
+        
+        var p = $( ".movexy4" );
+        var position = p.position();
+        var pleft=position.left;
+        var val1=xycoordinate(pleft);
+        $('input#drap4').val(val1); 
+       // $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+        
+        if(position.top > 80){
+           //alert("show");
+           $(".verline4").show();
+            // $("#draggable3").addclass('<hr width="1" size="500">');
+        }else{
+            //alert("hide");
+              $(".verline4").hide();
+        }
+    }
+});
+
+$("#draggable5").draggable({
+    containment: "#containment-wrapper",
+    scroll: false,
+    stop: function (event, ui) {
+        positions[this.id] = ui.position
+        localStorage.positions = JSON.stringify(positions)
+        
+        var p = $( ".movexy5" );
+        var position = p.position();
+        var pleft=position.left;
+        var val1=xycoordinate(pleft);
+        $('input#drap5').val(val1); 
+       // $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+        
+        if(position.top > 80){
+           //alert("show");
+           $(".verline5").show();
+            // $("#draggable3").addclass('<hr width="1" size="500">');
+        }else{
+            //alert("hide");
+              $(".verline5").hide();
+        }
+    }
+});
+
+  } );
+  
+ 
+ //zoom per image
+ 
+ $(document).ready(function (){
+   
+   /*$('.zom12').click(function () {
+       alert("Ezoomer");
+      $('#draggable').removeClass("draggabless");
+         $('#draggable2').removeClass("draggabless");
+          $('#draggable3').removeClass("draggabless");
+           $('#draggable4').removeClass("draggabless");
+            $('#draggable5').removeClass("draggabless");
+       $('#draggable1').addClass("draggabless");
+    if ($('.zom1').data('state') === '0') {
+
+        $('.zom1').animate({
+            'width': '200px',
+                'height': '200px',
+               
+        }, 200);
+        $('.zom1').data('state', '1');
+    } else {
+
+        $('.zom1').animate({
+           'width': '100px',
+                'height': '150px',
+                
+        }, 200);
+        $('.zom1').data('state', '0');
+    }
+});*/   
+
+  
+
+
+
+
+
+
+
+
+
+
+
+/*$(".movexy").move(function(){
+      var p = $( ".movexy" );
+        var position = p.position();
+        $( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+    });
+  */  
+ 
+  });
+  
+  
+  </script>
+</head>
+<body>
+
+<div id="containment-wrapper">
+    <div id="draggable" class="draggable ui-widget-content zom aligment1 movexy" data-zoo-over="true" >
+        <div style="height: 151px;"> <a href="imges/1.jpg" height="150px" width="100px" data-lighter >
+        <img src="imges/1.jpg" height="150px" width="100px" /><div class="icon-zoom-in data-lighter"></div></a></div>
+        
+        <div class="verline"> <hr width="1" size="154"></div>
+        <input type="hidden" name="drap" id="drap" value="" > 
+         
+      
+    </div>
+    <div id="draggable1" class="aligment2 ui-widget-content draggable zom1 ali2 movexy1" data-zoo-over="true" >
+         <div style="height: 151px;"><a href="imges/2.jpg" height="150px" width="100px" data-lighter>
+  <img src="imges/2.jpg" height="150px" width="100px" /><div class="icon-zoom-in data-lighter"></div></a></div>
+         
+          <div class="verline1"> <hr width="1" size="154"></div>
+          <input type="hidden" name="drap1" id="drap1" value="" > 
+    </div>
+    <div id="draggable2" class="ui-widget-content draggable  aligment3 zom2 movexy2"  data-zoo-over="true" >
+         <div style="height: 151px;" ><a href="imges/3.jpg" height="150px" width="100px" data-lighter>
+  <img src="imges/3.jpg" height="150px" width="100px" /><div class="icon-zoom-in data-lighter"></div></a></div>
+        
+         <div class="verline2"> <hr width="1" size="154"></div>
+         <input type="hidden" name="drap2" id="drap2" value="" > 
+      
+     </div>
+    <div id="draggable3" class="ui-widget-content draggable zom3 aligment4 movexy3" data-zoo-over="true" >
+      <div style="height: 151px;" ><a href="imges/4.jpg" height="150px" width="100px" data-lighter>
+  <img src="imges/4.jpg" height="150px" width="100px" /><div class="icon-zoom-in data-lighter"></div></a></div>
+      
+      <div class="verline3"> <hr width="1" size="154"></div>
+      <input type="hidden" name="drap3" id="drap3" value="" > 
+      
+    </div>
+    <div id="draggable4" class="ui-widget-content draggable aligment5 zom4 movexy4" data-zoo-over="true" >
+      <div style="height: 151px;"><a href="imges/5.jpg" height="150px" width="100px" data-lighter>
+  <img src="imges/5.jpg" height="150px" width="100px" /><div class="icon-zoom-in data-lighter"></div></a></div>
+     
+      <div class="verline4"> <hr width="1" size="154"></div>
+      <input type="hidden" name="drap4" id="drap4" value="" > 
+    </div>
+    <div id="draggable5" class="ui-widget-content draggable  aligment6 zom5 movexy5" data-zoo-over="true" >
+      <div style="height: 151px;"><a href="imges/6.jpg" height="150px" width="100px" data-lighter>
+  <img src="imges/6.jpg" height="150px" width="100px" /><div class="icon-zoom-in data-lighter"></div></a></div>
+    
+      <div class="verline5"> <hr width="1" size="154"></div>
+      <input type="hidden" name="drap5" id="drap5" value="" > 
+    </div>
+ 
+</div>
+    
+   
+    
+    <div>
+       
+                <div class="container1">
+                    <span class="arrow-left"><p><b>1</b></p></span>
+                    <span class="arrow-right"><p><b>100</b></p></span>
+</div>
+     
+        <div id="leftside">
+            <p>It doesn't change how i</br>i feel about BirdEye</p>
+        </div>
+         <div id="rightside">
+             <p>It makes me more</br>interested in BirdEye</p>
+        </div>
+    </div>
+ 
+
+</body>
+
+</html>
+

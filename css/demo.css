@@ -1,0 +1,214 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 21, 2017, 3:58:11 AM
+    Author     : nital.panchal
+*/
+.aligment2{ 
+   // margin-left: 10px;
+       // position: fixed;
+   
+}
+
+.ali2{
+    // position: fixed;
+//     margin-left: 127px;
+}
+.aligment2{ 
+//    margin-left: 127px;
+       // position: fixed;
+   
+}
+
+.aligment3{ 
+    //margin-left: 253px;
+      //  position: fixed;
+   
+}
+
+.aligment4 { 
+   // margin-left: 378px;
+      //  position: fixed;
+   
+}
+
+.aligment5 { 
+    //margin-left: 504px;
+      //  position: fixed;
+   
+}
+
+.aligment6 { 
+    //margin-left: 631px;
+       // position: fixed;
+   
+}
+
+  .draggable {
+      // padding-left:100px;
+      //    position: initial;
+      width: 100px;
+     //position: sticky;
+      float: left;
+      //position: absolute;
+     // position: relative; 
+      height: 150px;
+      padding: 0.5em;
+     
+      margin: 0 10px 10px 0;
+     // z-index:2;
+     //z-index:2;
+     cursor:pointer;
+  }
+  .overlapbox{
+      z-index:2;
+  }
+  
+  .col-4 i{
+      font-size: 4em;
+  }
+  /*#draggable, #draggable2 {
+      margin-bottom:20px;
+  }*/
+ .draggabless {
+      z-index: 99;
+     // cursor: n-resize;
+      
+  }
+  
+  /*#draggable1{
+     // z-index: 99;
+      
+  }
+  
+  /* #draggable2{
+      z-index: 99;
+  }
+  
+  #draggable3 {
+       z-index: 99;
+     // cursor: move;
+  }
+  
+  #draggable4 {
+       z-index: 99;
+     // cursor: move;
+  }
+  #draggable5 {
+       z-index: 99;
+     // cursor: move;
+  }*/
+  #containment-wrapper {
+      width: 935px;
+      //height:400px;
+      height:250px;
+      margin-left: 170px;
+      border:0.0px solid #000;
+      padding: 5px;
+  }
+  
+   
+  h3 {
+      clear: left;
+  }
+  
+  
+  
+  #line hr{
+    hight: 2px;
+    width: 786px;
+    margin-left: 230px;
+    margin-top: 100px;
+}
+ #leftside {
+         hight: 2px;
+    width: 786px;
+    margin-left: 230px;
+
+}
+  
+ #rightside {
+        width: 422px;
+margin-left: 908px;
+margin-right: 140px;
+margin-top: -52px;
+}
+  
+  
+
+    
+    
+ .arrow-down {
+  width: 0; 
+  height: 0; 
+  margin-top: 24px;
+  margin-left: 31px;
+  color:#fff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+ }
+  
+ .dashedline hr{
+    border: 1px dashed black;
+ }
+    
+
+  .alignent
+  {
+     width: 122px;
+     margin-top: 0px;
+     margin-left: 936px;
+  }
+  
+ /* .alignent p
+   {
+         margin-top: 0px;
+   }*/
+  .spaceline hr{
+            width:1;
+            size:210;
+  }
+  
+
+div.imagedisplay:before{
+    z-index: 2;
+}
+.verline hr{
+        display: block;
+}
+
+
+.container1{
+     margin-bottom: 40px;
+      margin-top: 138px;  
+      margin-left: 233px;  
+width:60%; 
+height:3px; 
+background:#0c0c0c; 
+
+}
+.arrow-right {
+width: 0; 
+height: 0; 
+border-top: 7px solid transparent;
+border-bottom: 7px solid transparent;
+border-left: 11px solid #0c0c0c;
+float:right;
+margin-top: -5px;
+    margin-right: -9px
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 6px solid transparent;
+    float: left;
+    border-right: 11px solid #0c0c0c;
+       margin-top: -5px;
+    margin-left: -11px;
+}

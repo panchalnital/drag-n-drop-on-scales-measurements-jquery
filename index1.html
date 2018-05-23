@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/css.css" rel="stylesheet" type="text/css"/>
+ <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+ <!--<link href="../css/demo2.css" rel="stylesheet" type="text/css"/>-->
+ <link rel="stylesheet" href="css/jquery-ui.css">
+ <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+ <!--<script src="js/zoom.js" type="text/javascript"></script>-->
+  <!-- zoom use js and css -->
+   <link href='css/jquery.lighter.css' rel='stylesheet' type='text/css'> 
+   <script src='js/jquery.js' type='text/javascript'></script>
+   <script src='js/jquery.lighter.js' type='text/javascript'></script>
+  <!-- end js  for js and css --> 
+ 
+ <!--<script src="js/zoom.js" type="text/javascript"></script>-->
+
+ <script src="js/jquery-1.12.4.js" type="text/javascript"></script>
+ <script src="js/jquery-ui.js" type="text/javascript"></script>
+  <title>Drag & Drop</title>
+ <script>
+ $(function() {
+    $( ".draggable" ).draggable({
+        revert: 'invalid',
+        helper: 'clone',
+        start: function(){ //hide original when showing clone
+            $(this).hide();             
+        },
+        stop: function(){ //show original when hiding clone
+            $(this).show();
+        }
+    });
+    
+    $( "#containment-wrapper" ).droppable({ //set container droppable
+        drop: function( event, ui ) { //on drop
+            ui.draggable.css({ // set absolute position of dropped object
+                top: ui.position.top, left: ui.position.left
+            }).appendTo('#containment-wrapper'); //append to container
+        }
+    });
+});
+
+
+ $(document).ready(function (){
+ 
+        $('#removeAll').click(function(){
+           // alert("test");
+          var drag1= $("#containment-wrapper #draggable").children().length;
+          if(drag1<=0){ $('#draggable').remove();}
+      
+          var drag2= $("#containment-wrapper #draggable1").children().length;
+          if(drag2<=0){ $('#draggable1').remove();}
+           
+           var drag3= $("#containment-wrapper #draggable2").children().length;
+           if(drag3<=0){ $('#draggable2').remove();}
+           
+             var drag4= $("#containment-wrapper #draggable3").children().length;
+           if(drag4<=0){ $('#draggable3').remove();}
+           
+             var drag5= $("#containment-wrapper #draggable4").children().length;
+           if(drag5<=0){ $('#draggable4').remove();}
+           
+             var drag6= $("#containment-wrapper #draggable5").children().length;
+          if(drag6<=0){ $('#draggable5').remove();}
+        
+        });
+        
+        $('.remove1').click(function(){
+           // alert("test");
+           $("#draggable").appendTo("#containment-wrapper2");
+
+        });
+      
+        $('.remove2').click(function(){
+              //$('#draggable1').remove();
+               $("#draggable1").appendTo("#containment-wrapper2");
+
+        });
+        $('.remove3').click(function(){
+             // $('#draggable2').remove();
+             $("#draggable2").appendTo("#containment-wrapper2");
+        });
+        $('.remove4').click(function(){
+             
+               $("#draggable3").appendTo("#containment-wrapper2");
+
+        });
+        $('.remove5').click(function(){
+             
+              $("#draggable4").appendTo("#containment-wrapper2");
+
+        });
+        $('.remove6').click(function(){
+             
+               $("#draggable5").appendTo("#containment-wrapper2");
+
+        });
+
+ 
+  });
+  </script> 
+  
+
+</head>
+<body>
+
+    <div class="row">
+      <div class="col-sm-6">
+            
+         <div id="containment-wrapper2" >
+             <div id="draggable" class="draggable ui-widget-content zom  movexy aligment1  overlapbox " data-zoo-over="true" >
+                    
+                  <div class="zom"><a href="imges/1.jpg" height="150px" width="100px" data-lighter >
+                      <img src="imges/1.jpg" height="150px" width="100px" /></a></div>
+                 <div class="icon-zoom-in image zom11 "><div class="remove1 removesbtn"><i class="icon-trash"></i></div></div>
+                  <div class="arrow-down"> </div>
+
+             </div>
+             <div id="draggable1" class="ui-widget-content draggable  zom1 movexy1 aligment2 overlapbox paddingDragg" data-zoo-over="true" style="left:10px;">
+                  <div class="zom"><a href="imges/2.jpg" height="150px" width="100px" data-lighter >
+                      <img src="imges/2.jpg" height="150px" width="100px" /></a></div>
+                  <div class="icon-zoom-in zom12"><div class="remove2 removesbtn"><i class="icon-trash"></i></div></div>
+                 <!--<div class="remove2 removesbtn"><i class="icon-trash"></i></div>-->
+                    <div class="arrow-down"> </div>
+
+             </div>
+             <div id="draggable2" class="ui-widget-content draggable zom2 movexy2 aligment3 overlapbox paddingDragg" data-zoo-over="true" style="left:10px;">
+                  <div class="zom"><a href="imges/3.jpg" height="150px" width="100px" data-lighter >
+                      <img src="imges/3.jpg" height="150px" width="100px" /></a></div>
+                 <div class="icon-zoom-in zom13"><div class="remove3 removesbtn"><i class="icon-trash"></i></div></div>
+                 <!--<div class="remove3 removesbtn"><i class="icon-trash"></i></div>-->
+                    <div class="arrow-down"> </div>
+
+              </div>
+             <div id="draggable3" class="ui-widget-content draggable zom3 movexy3 aligment6 overlapbox paddingDragg" data-zoo-over="true" style="left:10px;">
+                <div class="zom"><a href="imges/4.jpg" height="150px" width="100px" data-lighter >
+                      <img src="imges/4.jpg" height="150px" width="100px" /></a></div>
+              <div class="icon-zoom-in zom14"><div class="remove4 removesbtn"><i class="icon-trash"></i></div></div>
+              <!--<div class="remove4 removesbtn"><i class="icon-trash"></i></div>-->
+                 <div class="arrow-down"> </div>
+
+             </div>
+              <div id="draggable4" class="ui-widget-content draggable zom5 movexy4 aligment4" data-zoo-over="true" style="left:10px;">
+                <div class="zom"><a href="imges/5.jpg" height="150px" width="100px" data-lighter >
+                      <img src="imges/5.jpg" height="150px" width="100px" /></a></div>
+               <div class="icon-zoom-in zom15"><div class="remove5 removesbtn"><i class="icon-trash"></i></div></div>
+               <!--<div class="remove5 removesbtn"><i class="icon-trash"></i></div>-->
+                <div class="arrow-down"> </div>
+
+             </div>
+             <div id="draggable5" class="ui-widget-content draggable zom6 movexy5 aligment5" data-zoo-over="true" style="left:10px;">
+                 <div class="zom"><a href="imges/6.jpg" height="150px" width="100px" data-lighter >
+                      <img src="imges/6.jpg" height="150px" width="100px" /></a></div>
+               <div class="icon-zoom-in zom16"><div class="remove6 removesbtn"><i class="icon-trash"></i></div></div>
+             <!-- <div class="remove6 removesbtn"><i class="icon-trash"></i></div>-->
+                <div class="arrow-down"> </div>
+
+             </div>  
+        
+
+
+
+</div>
+          <!--<div class="lineXs"><hr style="border: 1px dashed; margin-left: -203px;margin-bottom: -89px; " width="470px" ></div>   -->
+      
+      </div>        
+          
+          
+        
+
+      
+      <div class="col-sm-6" >
+          
+            <div  id="containment-wrapper">
+              <div id="circleleid" class="circle"> <div  class="circle1"><div  class="circle2"><div  class="circle3"><div  class="circle4"> <div class="vaterxUper"></div><div  class="circle5"> <div class="vaterxline"><div class="circleText"><div class="lineXs"><hr style="border: 1px dashed; margin-left: -215px;;margin-bottom: -65px; " width="490px" ></div ><img style="
+    margin-top: 43px;" src="http://localhost/360/dragdrop/imges/actor.png" height="46px" width="57px"></div> </div></div></div></div></div></div></div>
+          </div>
+          
+          
+         </div>
+        <div id="removeAll" class="alignent"><i class="icon-trash"></i></br><p class="msg">Not at all relevant</p>  </div>
+   
+            <div class="verline3"> <hr width="1" size="130" style="color:#666666;border:dotted;"></div>
+    </div>      
+</body>
+</html>
